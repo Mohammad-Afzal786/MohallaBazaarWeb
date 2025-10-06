@@ -1,19 +1,20 @@
-import { MetadataRoute } from "next";
+import { NextResponse } from "next/server";
 
-export default function sitemap(): MetadataRoute.Sitemap {
-  return [
-    {
-      url: "https://mohallabazaar.vercel.app/",
-      lastModified: new Date(),
-      changeFrequency: "daily",
-      priority: 1.0,
+export async function GET() {
+  const sitemapIndex = `<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <sitemap>
+    <loc>https://mohallabazaar.vercel.app/sitemap-pages.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://mohallabazaar.vercel.app/sitemap-download.xml</loc>
+  </sitemap>
+  <!-- Agar aur sitemaps hain to yahan add karo -->
+</sitemapindex>`;
+
+  return new Response(sitemapIndex, {
+    headers: {
+      "Content-Type": "application/xml",
     },
-    {
-      url: "https://mohallabazaar.vercel.app/download",
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 0.8,
-    },
-   
-  ];
+  });
 }
