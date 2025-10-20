@@ -21,9 +21,14 @@ export default function HomePage() {
                     Your one-stop solution for local shopping. Fast, secure & reliable.
                 </p>
 
-                <a href="/MohallaBazaar.apk" className="px-14 py-5 text-xl font-bold text-gray-900 bg-green-400 rounded-full shadow-lg hover:bg-green-500 transition transform hover:scale-105 animate-bounce">
-                    ⬇️OFFICAIL DOWNLOAD APK
-                </a>
+               <a
+  href="https://github.com/Mohammad-Afzal786/MohallaBazaarWeb/releases/download/v1.0.2/MohallaBazaar.apk"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="px-14 py-5 text-xl font-bold text-gray-900 bg-green-400 rounded-full shadow-lg hover:bg-green-500 transition transform hover:scale-105 animate-bounce"
+>
+  ⬇️ OFFICIAL DOWNLOAD APK
+</a>
 
                 <p className="mt-6 text-sm text-gray-400">For Android devices only • Version 1.0.0</p>
             </section>
