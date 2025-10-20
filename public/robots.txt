@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://mohallabazaar.vercel.app
+
+# Sitemaps
+Sitemap: https://mohallabazaar.vercel.app/sitemap.xml
