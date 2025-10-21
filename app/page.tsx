@@ -30,7 +30,7 @@ export default function HomePage() {
   ⬇️ OFFICIAL DOWNLOAD APK
 </a>
 
-                <p className="mt-6 text-sm text-gray-400">For Android devices only • Version 1.0.0</p>
+                <p className="mt-6 text-sm text-gray-400">For Android devices only • Version 1.0.4</p>
             </section>
 
             {/* Features Section */}

@@ -20,17 +20,17 @@ export default function Header() {
                 Home
               </Link>
             </li>
-     
-          <li>
+            <li>
               <Link href="/download" className="hover:text-green-400 transition duration-300">
-                download
+                Download
+              </Link>
+            </li>
+            <li>
+              <Link href="/privacy" className="hover:text-green-400 transition duration-300">
+                Privacy Policy
               </Link>
             </li>
           </ul>
-          
-            
-          
-          
         </nav>
       </div>
     </header>
