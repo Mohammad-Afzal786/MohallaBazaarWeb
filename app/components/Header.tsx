@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import React, { useState } from 'react';
+import Image from "next/image";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -9,30 +10,41 @@ export default function Header() {
   return (
     <header className="bg-gray-800 text-white p-4 shadow-lg sticky top-0 z-20">
       <div className="container mx-auto flex justify-between items-center">
-        {/* Logo/Branding */}
-        <Link href="/" className="text-2xl font-bold text-white">
-          Mohalla Bazaar
-        </Link>
+        <div className="flex items-center gap-3">
+                   {/* Logo/Branding */}
+<Link href="/" className="flex items-center gap-3">
+  <Image
+    src="/logo.png"
+    alt="Logo"
+    width={120}
+    height={120}
+    className="rounded-lg object-contain"
+    priority
+  />
+  {/* <span className="text-3xl font-bold">Ogenix</span> */}
+</Link>
+
+                    {/* <span className="text-3xl font-bold">Ogenix</span> */}
+                  </div>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex">
-          <ul className="flex space-x-6">
-            <li>
-              <Link href="/" className="hover:text-green-400 transition duration-300">
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link href="/download" className="hover:text-green-400 transition duration-300">
-                Download
-              </Link>
-            </li>
-            <li>
-              <Link href="/privacy" className="hover:text-green-400 transition duration-300">
-                Privacy Policy
-              </Link>
-            </li>
-          </ul>
+        <nav className="hidden md:flex items-center space-x-6">
+          <Link href="/" className="hover:text-green-400 transition duration-300">
+            Home
+          </Link>
+          <Link href="/download" className="hover:text-green-400 transition duration-300">
+            Download
+          </Link>
+          <Link href="/privacy" className="hover:text-green-400 transition duration-300">
+            Privacy Policy
+          </Link>
+          {/* Download App Button */}
+          <Link
+           href="/MohallaBazaar.apk"
+            className="ml-4 px-4 py-2 bg-green-500 hover:bg-green-600 rounded-lg transition duration-300"
+          >
+            Download App
+          </Link>
         </nav>
 
         {/* Mobile Hamburger */}
@@ -78,6 +90,16 @@ export default function Header() {
                 className="hover:text-green-400 transition duration-300 block"
               >
                 Privacy Policy
+              </Link>
+            </li>
+            {/* Mobile Download Button */}
+            <li>
+              <Link
+                href="/MohallaBazaar.apk"
+                onClick={() => setMenuOpen(false)}
+                className="block bg-green-500 hover:bg-green-600 text-white text-center py-2 rounded-lg transition duration-300"
+              >
+                Download App
               </Link>
             </li>
           </ul>

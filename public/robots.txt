@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://mohallabazaar.vercel.app
+Host: https://mohallabazaar.shop/
 
 # Sitemaps
-Sitemap: https://mohallabazaar.vercel.app/sitemap.xml
+Sitemap: https://mohallabazaar.shop/sitemap.xml
