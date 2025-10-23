@@ -38,6 +38,8 @@ export default function Header() {
           <Link href="/privacy" className="hover:text-green-400 transition duration-300">
             Privacy Policy
           </Link>
+        
+
           {/* Download App Button */}
           <Link
            href="/MohallaBazaar.apk"
