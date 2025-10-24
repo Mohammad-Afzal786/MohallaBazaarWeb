@@ -1,9 +1,17 @@
 "use client";
 
 import React from "react";
+import SEOHead from "./components/SEOHead";
 
 export default function HomePage() {
     return (
+         <>
+      <SEOHead
+        title="Mohalla Bazaar - Home"
+        description="Order fresh vegetables, groceries, and daily essentials  with Mohalla Bazaar. Fast delivery within 30 minutes. Download the app now!"
+        url="https://mohallabazaar.shop/"
+        image="https://mohallabazaar.shop/og-image.jpg"
+      />
         <div className="flex flex-col min-h-screen font-sans bg-gray-900 text-white">
 
             {/* Hero Section */}
@@ -108,5 +116,6 @@ export default function HomePage() {
                 </div>
             </section>
         </div>
+        </>
     );
 }
