@@ -47,26 +47,39 @@ export default function Footer() {
         </div>
 
         {/* Explore Section */}
-        <div>
-          <h3 className="font-semibold text-xl mb-4">
-            Explore <span className="text-green-400">—</span>
-          </h3>
-          <ul className="space-y-2 text-gray-300">
-            {[
-              "About Company",
-              "Our Services",
-              "Become a Seller",
-              "New Products",
-              "Contact Us",
-            ].map((item) => (
-              <li key={item}>
-                <a href="#" className="hover:text-green-400 transition-colors">
-                  {item}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
+<div>
+  <h3 className="font-semibold text-xl mb-4">
+    Explore <span className="text-green-400">—</span>
+  </h3>
+  <ul className="text-gray-300">
+    <li className="mb-2">
+      <a href="/" className="hover:text-green-400 transition-colors">
+        Home
+      </a>
+    </li>
+    <li className="mb-2">
+      <a href="/download" className="hover:text-green-400 transition-colors">
+        Download
+      </a>
+    </li>
+    <li className="mb-2">
+      <a href="/privacy" className="hover:text-green-400 transition-colors">
+        Privacy Policy
+      </a>
+    </li>
+    <li className="mb-2">
+      <a href="/MohallaBazaar.apk" className="hover:text-green-400 transition-colors">
+        Download App
+      </a>
+    </li>
+    <li className="mb-2">
+      <a href="/contact" className="hover:text-green-400 transition-colors">
+        Contact Us
+      </a>
+    </li>
+  </ul>
+</div>
+
 
         {/* Contact Section */}
         <div>
@@ -86,8 +99,17 @@ export default function Footer() {
       {/* Footer Bottom */}
       <div className="border-t border-gray-700 mt-10 pt-4 flex flex-col md:flex-row items-center justify-between text-sm text-gray-400">
         <p className="text-center md:text-left">
-          &copy; {currentYear} by mohallabazaar.shop
-        </p>
+  &copy; {currentYear} by{" "}
+  <a
+    href="https://mohallabazaar.shop"
+   
+    rel="noopener noreferrer"
+    className="text-green-400 hover:underline"
+  >
+    mohallabazaar.shop
+  </a>
+</p>
+
 
         <div className="flex flex-wrap justify-center items-center gap-2 mt-3 md:mt-0">
          

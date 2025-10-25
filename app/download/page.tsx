@@ -28,9 +28,7 @@ export default function DownloadPage() {
           </p>
 
           <a
-            href="https://github.com/Mohammad-Afzal786/MohallaBazaarWeb/releases/download/v1.0.2/MohallaBazaar.apk"
-            target="_blank"
-            rel="noopener noreferrer"
+           href="/MohallaBazaar.apk"
             className="px-8 sm:px-12 md:px-14 py-4 sm:py-5 text-lg sm:text-xl md:text-xl font-bold text-gray-900 bg-green-400 rounded-full shadow-lg hover:bg-green-500 transition transform hover:scale-105 animate-bounce"
           >
             ⬇️ OFFICIAL DOWNLOAD APK
