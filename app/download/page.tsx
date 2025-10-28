@@ -9,6 +9,7 @@ export default function DownloadPage() {
         title="Mohalla Bazaar - Download App"
         description="Get fresh vegetables, groceries, and daily essentials delivered to your doorstep within 30 minutes. Download the Mohalla Bazaar App for fast and reliable service."
         url="https://mohallabazaar.shop/download"
+
         image="https://mohallabazaar.shop/og-image.jpg"
       />
 

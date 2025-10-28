@@ -7,10 +7,12 @@ interface SEOHeadProps {
   title: string;
   description: string;
   image?: string;
+  url?: string; // added for page-specific canonical URLs
 }
 
-export default function SEOHead({ title, description, image }: SEOHeadProps) {
-  const canonicalUrl = "https://mohallabazaar.shop"; // 🔥 fixed canonical domain
+export default function SEOHead({ title, description, image, url }: SEOHeadProps) {
+  // canonicalUrl will use custom `url` if provided, else default to main domain
+  const canonicalUrl = url || "https://mohallabazaar.shop";
 
   return (
     <Head>
@@ -22,16 +24,19 @@ export default function SEOHead({ title, description, image }: SEOHeadProps) {
       {/* Robots */}
       <meta name="robots" content="index, follow" />
 
-      {/* Open Graph */}
+      {/* Open Graph (Facebook, WhatsApp, etc.) */}
       <meta property="og:type" content="website" />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:url" content={canonicalUrl} />
-      {image && <meta property="og:image" content={image} />}
       <meta property="og:site_name" content="Mohalla Bazaar" />
+      {image && <meta property="og:image" content={image} />}
 
       {/* Twitter Card */}
-      <meta name="twitter:card" content={image ? "summary_large_image" : "summary"} />
+      <meta
+        name="twitter:card"
+        content={image ? "summary_large_image" : "summary"}
+      />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       {image && <meta name="twitter:image" content={image} />}
