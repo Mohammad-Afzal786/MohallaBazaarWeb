@@ -6,23 +6,27 @@ import Head from "next/head";
 interface SEOHeadProps {
   title: string;
   description: string;
-  url: string;
   image?: string;
 }
 
-export default function SEOHead({ title, description, url, image }: SEOHeadProps) {
+export default function SEOHead({ title, description, image }: SEOHeadProps) {
+  const canonicalUrl = "https://mohallabazaar.shop"; // 🔥 fixed canonical domain
+
   return (
     <Head>
       {/* Basic Meta */}
       <title>{title}</title>
       <meta name="description" content={description} />
-      <link rel="canonical" href={url} />
+      <link rel="canonical" href={canonicalUrl} />
+
+      {/* Robots */}
+      <meta name="robots" content="index, follow" />
 
       {/* Open Graph */}
       <meta property="og:type" content="website" />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
-      <meta property="og:url" content={url} />
+      <meta property="og:url" content={canonicalUrl} />
       {image && <meta property="og:image" content={image} />}
       <meta property="og:site_name" content="Mohalla Bazaar" />
 
@@ -42,17 +46,17 @@ export default function SEOHead({ title, description, url, image }: SEOHeadProps
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "WebPage",
-            "name": title,
-            "url": url,
-            "description": description,
-            "publisher": {
+            name: title,
+            url: canonicalUrl,
+            description,
+            publisher: {
               "@type": "Organization",
-              "name": "Mohalla Bazaar",
-              "logo": {
+              name: "Mohalla Bazaar",
+              logo: {
                 "@type": "ImageObject",
-                "url": "https://mohallabazaar.shop/og-image.jpg"
-              }
-            }
+                url: "https://mohallabazaar.shop/og-image.jpg",
+              },
+            },
           }),
         }}
       />
