@@ -1,7 +1,7 @@
 "use client";
 
-import Link from 'next/link';
-import React, { useState } from 'react';
+import Link from "next/link";
+import React, { useState } from "react";
 import Image from "next/image";
 
 export default function Header() {
@@ -10,39 +10,40 @@ export default function Header() {
   return (
     <header className="bg-gray-800 text-white p-4 shadow-lg sticky top-0 z-20">
       <div className="container mx-auto flex justify-between items-center">
-        <div className="flex items-center gap-3">
-                   {/* Logo/Branding */}
-<Link href="/" className="flex items-center gap-3">
-  <Image
-    src="/logo.png"
-    alt="Logo"
-    width={120}
-    height={120}
-    className="rounded-lg object-contain"
-    priority
-  />
-  {/* <span className="text-3xl font-bold">Ogenix</span> */}
-</Link>
-
-                    {/* <span className="text-3xl font-bold">Ogenix</span> */}
-                  </div>
+        {/* Logo */}
+        <Link href="/" className="flex items-center gap-3">
+          <Image
+            src="/logo.png"
+            alt="Mohalla Bazaar Logo"
+            width={120}
+            height={120}
+            className="rounded-lg object-contain"
+            priority
+          />
+        </Link>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-6">
           <Link href="/" className="hover:text-green-400 transition duration-300">
             Home
           </Link>
+
           <Link href="/download" className="hover:text-green-400 transition duration-300">
             Download
           </Link>
+
           <Link href="/privacy" className="hover:text-green-400 transition duration-300">
             Privacy Policy
           </Link>
-        
+
+          {/* 🟢 Contact Page Link */}
+          <Link href="/contact" className="hover:text-green-400 transition duration-300">
+            Contact
+          </Link>
 
           {/* Download App Button */}
           <Link
-           href="/MohallaBazaar.apk"
+            href="/MohallaBazaar.apk"
             className="ml-4 px-4 py-2 bg-green-500 hover:bg-green-600 rounded-lg transition duration-300"
           >
             Download App
@@ -76,6 +77,7 @@ export default function Header() {
                 Home
               </Link>
             </li>
+
             <li>
               <Link
                 href="/download"
@@ -85,6 +87,7 @@ export default function Header() {
                 Download
               </Link>
             </li>
+
             <li>
               <Link
                 href="/privacy"
@@ -94,6 +97,18 @@ export default function Header() {
                 Privacy Policy
               </Link>
             </li>
+
+            {/* 🟢 Contact Page Link (Mobile) */}
+            <li>
+              <Link
+                href="/contact"
+                onClick={() => setMenuOpen(false)}
+                className="hover:text-green-400 transition duration-300 block"
+              >
+                Contact
+              </Link>
+            </li>
+
             {/* Mobile Download Button */}
             <li>
               <Link

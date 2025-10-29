@@ -1,127 +1,133 @@
+"use client";
+
 import React from "react";
+import "@fortawesome/fontawesome-free/css/all.min.css";
+import SEOHead from "../components/SEOHead";
 
-const ContactPage = () => {
+export default function ContactPage() {
   return (
-    <div>
-      {/* Page Header */}
-      <section className="page-header">
-        <div
-          className="page-header-bg"
-          style={{ backgroundImage: "url(assets/images/backgrounds/page-header-bg.jpg)" }}
-        ></div>
-        <div
-          className="page-header__ripped-paper"
-          style={{ backgroundImage: "url(assets/images/shapes/page-header-ripped-paper.png)" }}
-        ></div>
-        <div className="container">
-          <div className="page-header__inner">
-            <ul className="thm-breadcrumb list-unstyled">
-              <li><a href="/">Home</a></li>
-              <li><span>/</span></li>
-              <li>Contact</li>
-            </ul>
-            <h2>Contact</h2>
-          </div>
-        </div>
-      </section>
+    <>
+      {/* ✅ SEO Head + Schema.org for Google Rich Results */}
+      <SEOHead
+        title="Contact - Mohalla Bazaar"
+        description="Get in touch with Mohalla Bazaar. Call, email, or visit us for any inquiries related to orders, partnerships, or support."
+        url="https://mohallabazaar.shop/contact"
+        image="https://mohallabazaar.shop/og-image.jpg"
+      />
 
-      {/* Google Map */}
-      <section className="google-map">
-        <div className="container">
+      {/* ✅ LocalBusiness Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            name: "Mohalla Bazaar",
+            url: "https://mohallabazaar.shop",
+            telephone: "+91 8588003437",
+            email: "mohallabazaar.in@gmail.com",
+            address: {
+              "@type": "PostalAddress",
+              streetAddress: "Mohalla Bazaar App",
+              addressCountry: "IN",
+            },
+            sameAs: [
+
+              "https://www.instagram.com/mohallabazaar",
+
+            ],
+          }),
+        }}
+      />
+
+      {/* ✅ Page Content */}
+      <div className="flex flex-col min-h-screen font-sans bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 text-white">
+
+        {/* 🗺️ Google Map */}
+        <section className="google-map relative w-full h-[450px] sm:h-[500px] lg:h-[550px] overflow-hidden">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4562.753041141002!2d-118.80123790098536!3d34.152323469614075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80e82469c2162619%3A0xba03efb7998eef6d!2sCostco+Wholesale!5e0!3m2!1sbn!2sbd!4v1562518641290!5m2!1sbn!2sbd"
-            className="google-map__one"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3526.1286834555845!2d79.19344559999999!3d27.8980241!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397543aed96046c1%3A0x86eee0d4e43cb68!2sMohalla%20Bazaar!5e0!3m2!1sen!2sin!4v1761760720518!5m2!1sen!2sin"
+            style={{ border: 0 }}
+            className="absolute top-0 left-0 w-full h-full"
             allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
             title="Google Map"
           ></iframe>
-        </div>
-      </section>
+          <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-gray-900/40 to-transparent"></div>
+        </section>
 
-      {/* Contact Details */}
-      <section className="contact-details">
-        <div className="container">
-          <div className="contact-details__inner">
-            <ul className="contact-details__contact-list list-unstyled">
-              <li>
-                <div className="icon"><span className="icon-help"></span></div>
-                <div className="content">
-                  <p>Have question?</p>
-                  <h4><a href="tel:923076806860">+ 92 ( 307 ) 68 - 06860</a></h4>
-                </div>
-              </li>
-              <li>
-                <div className="icon"><span className="icon-mailbox"></span></div>
-                <div className="content">
-                  <p>Write email</p>
-                  <h4><a href="mailto:needhelp@company.com">needhelp@company.com</a></h4>
-                </div>
-              </li>
-              <li>
-                <div className="icon"><span className="icon-maps-and-flags"></span></div>
-                <div className="content">
-                  <p>Visit store</p>
-                  <h4>Valentin, Street Road 24, New York</h4>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
+        {/* 📞 Contact Section */}
+        <section className="relative py-20 sm:py-24 px-6 sm:px-8 md:px-12 text-center overflow-hidden">
+          <div className="absolute top-10 left-10 w-40 h-40 bg-green-600 rounded-full opacity-20 blur-3xl animate-pulse-slow"></div>
+          <div className="absolute bottom-10 right-10 w-48 h-48 bg-blue-600 rounded-full opacity-20 blur-3xl animate-pulse-slow"></div>
 
-      {/* Contact Form */}
-      <section className="contact-page">
-        <div className="container">
-          <div className="row">
-            <div className="col-xl-12">
-              <div className="section-title text-center">
-                <span className="section-title__tagline">Write a Message</span>
-                <h2 className="section-title__title">We’re always here to<br /> help you</h2>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mb-12 relative z-10">
+            Mohalla Bazaar<span className="text-green-400"> Contact</span>
+          </h2>
+
+          <p className="text-gray-300 text-base sm:text-lg max-w-2xl mx-auto mb-16 relative z-10">
+            We’d love to hear from you! Reach out for inquiries, feedback, or support.
+          </p>
+
+          {/* 📬 Contact Cards */}
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 relative z-10">
+            {/* Phone */}
+            <div className="flex flex-col items-center text-center border border-green-400/30 hover:border-green-400/80 rounded-2xl p-8 bg-gray-800/40 backdrop-blur-md shadow-md hover:shadow-green-500/30 transition-all hover:-translate-y-2 duration-300">
+              <div className="bg-gradient-to-br from-green-500 to-green-700 text-white w-16 h-16 flex items-center justify-center rounded-full mb-5 shadow-lg">
+                <i className="fa fa-phone text-2xl"></i>
               </div>
-              <div className="contact-page__content">
-                <form
-                  action="assets/inc/sendemail.php"
-                  className="contact-page__form contact-form-validated"
-                  noValidate
+              <p className="text-gray-400 text-sm mb-1">Have a question?</p>
+              <h4 className="text-lg font-semibold">
+                <a href="tel:8588003437" className="hover:text-green-400 transition">
+                  +91 8588003437
+                </a>
+              </h4>
+            </div>
+
+            {/* Email */}
+            <div className="flex flex-col items-center text-center border border-green-400/30 hover:border-green-400/80 rounded-2xl p-8 bg-gray-800/40 backdrop-blur-md shadow-md hover:shadow-green-500/30 transition-all hover:-translate-y-2 duration-300">
+              <div className="bg-gradient-to-br from-green-500 to-green-700 text-white w-16 h-16 flex items-center justify-center rounded-full mb-5 shadow-lg">
+                <i className="fa fa-envelope text-2xl"></i>
+              </div>
+              <p className="text-gray-400 text-sm mb-1">Write email</p>
+              <h4 className="text-lg font-semibold">
+                <a
+                  href="mailto:mohallabazaar.in@gmail.com"
+                  className="hover:text-green-400 transition"
                 >
-                  <div className="row">
-                    <div className="col-xl-6">
-                      <div className="contact-page__form-input-box">
-                        <input type="text" placeholder="Your name" name="name" />
-                      </div>
-                    </div>
-                    <div className="col-xl-6">
-                      <div className="contact-page__form-input-box">
-                        <input type="email" placeholder="Email address" name="email" />
-                      </div>
-                    </div>
-                    <div className="col-xl-6">
-                      <div className="contact-page__form-input-box">
-                        <input type="text" placeholder="Subject" name="Subject" />
-                      </div>
-                    </div>
-                    <div className="col-xl-6">
-                      <div className="contact-page__form-input-box">
-                        <input type="text" placeholder="Phone" name="phone" />
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-xl-12">
-                    <div className="contact-page__form-input-box text-message-box">
-                      <textarea name="message" placeholder="Write a message"></textarea>
-                    </div>
-                    <div className="contact-page__btn-box">
-                      <button type="submit" className="thm-btn contact-page__btn">Send a message</button>
-                    </div>
-                  </div>
-                </form>
-                <div className="result"></div>
+                  mohallabazaar.in@gmail.com
+                </a>
+              </h4>
+            </div>
+
+            {/* Website */}
+            <div className="flex flex-col items-center text-center border border-green-400/30 hover:border-green-400/80 rounded-2xl p-8 bg-gray-800/40 backdrop-blur-md shadow-md hover:shadow-green-500/30 transition-all hover:-translate-y-2 duration-300">
+              <div className="bg-gradient-to-br from-green-500 to-green-700 text-white w-16 h-16 flex items-center justify-center rounded-full mb-5 shadow-lg">
+                <i className="fa fa-globe text-2xl"></i>
               </div>
+              <p className="text-gray-400 text-sm mb-1">Visit our website</p>
+              <h4 className="text-lg font-semibold">
+                <a
+                  href="https://mohallabazaar.shop"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-green-400 transition"
+                >
+                  mohallabazaar.shop
+                </a>
+              </h4>
             </div>
           </div>
-        </div>
-      </section>
-    </div>
-  );
-};
 
-export default ContactPage;
+          {/* 🕒 Business Hours */}
+          <div className="text-center mt-16 text-gray-400 relative z-10">
+            <h4 className="text-xl font-semibold text-white mb-3">Business Hours</h4>
+            <p>Mon – Sat: 7:00 AM – 8:30 PM</p>
+
+          </div>
+        </section>
+      </div>
+    </>
+  );
+}
