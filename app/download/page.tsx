@@ -21,12 +21,15 @@ export default function DownloadPage() {
           <div className="absolute top-0 left-0 w-48 h-48 bg-purple-600 rounded-full opacity-20 animate-pulse-slow blur-3xl"></div>
           <div className="absolute bottom-0 right-0 w-64 h-64 bg-blue-500 rounded-full opacity-20 animate-pulse-slow blur-3xl"></div>
 
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-6 leading-tight animate-fadeIn">
-            Download the <span className="text-green-400">Mohalla Bazaar</span> App
-          </h2>
-          <p className="text-lg sm:text-xl md:text-2xl text-gray-300 max-w-xl sm:max-w-2xl md:max-w-3xl mx-auto mb-10 animate-fadeIn delay-200">
-            Your one-stop solution for local shopping. Fast, secure & reliable.
-          </p>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-6 leading-tight animate-fadeIn">
+                <span className="text-green-400">Mohalla Bazaar</span>
+                </h1>
+                <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-6 leading-tight animate-fadeIn">
+                Download App
+                </h2>
+                <p className="text-lg sm:text-xl md:text-2xl text-gray-300 max-w-xl sm:max-w-2xl md:max-w-3xl mx-auto mb-10 animate-fadeIn delay-200">
+                    Order fresh vegetables, groceries, and daily essentials  with Mohalla Bazaar. Fast delivery within 30 minutes. Download the app now!
+                </p>
 
           <a
            href="/MohallaBazaar.apk"
