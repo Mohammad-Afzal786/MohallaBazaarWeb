@@ -7,6 +7,6 @@ module.exports = {
   priority: 0.7,
   exclude: ['/admin/*'], // Agar koi pages exclude karne hain
   additionalPaths: async (config) => [
-    await config.transform(config, '/MohallaBazaar.apk'), // APK download link add
+    await config.transform(config, 'mohallabazaar.shop/api/download-apk'), // APK download link add
   ],
 };
