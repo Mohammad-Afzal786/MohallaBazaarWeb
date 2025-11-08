@@ -43,7 +43,7 @@ export default function Header() {
 
           {/* Download App Button */}
           <Link
-            href="/MohallaBazaar.apk"
+            href="mohallabazaar.shop/api/download-apk"
             className="ml-4 px-4 py-2 bg-green-500 hover:bg-green-600 rounded-lg transition duration-300"
           >
             Download App
@@ -112,7 +112,7 @@ export default function Header() {
             {/* Mobile Download Button */}
             <li>
               <Link
-                href="/MohallaBazaar.apk"
+                href="mohallabazaar.shop/api/download-apk"
                 onClick={() => setMenuOpen(false)}
                 className="block bg-green-500 hover:bg-green-600 text-white text-center py-2 rounded-lg transition duration-300"
               >
