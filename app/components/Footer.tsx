@@ -68,7 +68,7 @@ export default function Footer() {
       </a>
     </li>
     <li className="mb-2">
-      <a href="mohallabazaar.shop/api/download-apk" className="hover:text-green-400 transition-colors">
+      <a href="/api/download-apk" className="hover:text-green-400 transition-colors">
         Download App
       </a>
     </li>
