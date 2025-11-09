@@ -14,7 +14,7 @@ export default function Header() {
         <Link href="/" className="flex items-center gap-3">
           <Image
             src="/logo.png"
-            alt="Mohalla Bazaar Logo"
+            alt="Mohalla Bazaar - Download App Fresh vegetables, groceries, and daily essentials delivered at your doorstep. Fast, secure, and reliable service via Mohalla Bazaar app."
             width={120}
             height={120}
             className="rounded-lg object-contain"
